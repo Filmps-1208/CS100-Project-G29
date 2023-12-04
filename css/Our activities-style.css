@@ -1,0 +1,84 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgb(255, 254, 192);
+}
+.body1{
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgb(216, 152, 112) ;
+}
+.header{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+.header h1{
+    border-style: solid;
+    font-size: 1.5rem;
+}
+
+.body1 .myform{
+    font-size: 100%;
+    margin-top: 30px;
+}
+
+.myform .content{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.content label{
+    font-weight: 700;
+    color: #333;
+}
+
+.myform .content input{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #575757;
+    margin-top: 8px;
+    border: 1px solid #9970cf;
+    border-radius: 6px;
+    padding: 0 5px;
+}
+
+.content input:hover{
+    background-color: rgb(251, 236, 255);
+
+}
+.gender-1{
+    margin-bottom: 20px;
+}
+
+.gender-1 h2{
+    font-size: 100%;
+    color: #333;
+    font-weight: 700;
+}
+
+.Activity-1{
+    margin-bottom: 20px;
+}
+
+.Activity-1 h2{
+    font-size: 100%;
+    color: #333;
+    font-weight: 700;
+}
+.submit input[type="submit"] {
+    background-color: rgb(127, 255, 123);
+    padding: 5px 10px;
+    border: solid, rgb(240, 99, 176);
+    border-radius: 2px;
+    cursor: pointer;
+}
