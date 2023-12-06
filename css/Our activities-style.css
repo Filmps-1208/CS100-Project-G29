@@ -24,12 +24,12 @@ body{
     font-size: 1.5rem;
 }
 
-.body1 .myform{
+.body1 .myForm{
     font-size: 100%;
     margin-top: 30px;
 }
 
-.myform .content{
+.myForm .content{
     width: 100%;
     margin-bottom: 20px;
 }
@@ -39,7 +39,7 @@ body{
     color: #333;
 }
 
-.myform .content input{
+.myForm .content input{
     position: relative;
     height: 50px;
     width: 100%;
@@ -78,7 +78,7 @@ body{
 .submit input[type="submit"] {
     background-color: rgb(127, 255, 123);
     padding: 5px 10px;
-    border: solid, rgb(240, 99, 176);
+    border: solid, rgb(99, 115, 240);
     border-radius: 2px;
     cursor: pointer;
 }

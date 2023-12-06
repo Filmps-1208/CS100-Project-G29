@@ -13,7 +13,7 @@
         <h1>Our Activities</h1>
         <p><u>**กรุณากรอกข้อมูลดังต่อไปนี้**</u></p>
         </div>
-        <form class="myform" action="" method="post">
+        <form class="myForm" action="#" method="post">
             <div class="content">
               <label for="fullname">ชื่อ - นามสกุล (ภาษาไทย) *</label>
               <input type="text" placeholder="กรุณาใส่ชื่อ - นามสกุล (ไทย)" id="fullname" name="fullname" required pattern="[\u0E01-\u0E4F\s]+">
@@ -34,22 +34,6 @@
               <input type="radio" id="other" name="gender" value="other" required>
               <label for="other">ไม่ระบุเพศ</label>
             </div>
-            </div>
-      
-            <div class="content">
-              <label for="Year">ปีการศึกษา:</label>
-              <select id="Year" name="Year">
-                <option value="" disabled selected>กรุณาเลือกปีการศึกษา</option>
-                <option value="2561">2561</option>
-                <option value="2562">2562</option>
-                <option value="2563">2563</option>
-                <option value="2564">2564</option>
-                <option value="2565">2565</option>
-                <option value="2566">2566</option>
-                <option value="2567">2567</option>
-                <option value="2568">2568</option>
-                <option value="2569">2569</option>
-              </select>
             </div>
 
             <div class="content">
@@ -94,77 +78,45 @@
             <label for="dmy">วัน/เดือน/ปีเกิด:</label>
             <input type="date" id="dmy" name="dmy" required>
           </div>
-        
+          
           <div class="Activity-1">
             <h2>กิจกรรมที่เคยเข้าร่วม: </h2>
           <div class="Activity">
-            <input type="checkbox" id="ac1" name="ac1" value="game" >
-            <label for="ac1"> TU Freshy Games</label>
+            <input type="checkbox" id="game" name="Activity" value="game" >
+            <label for="game"> TU Freshy Games</label>
           </div>
           <div class="Activity">
-            <input type="checkbox" id="ac2" name="ac2" value="tu89" >
-            <label for="ac2"> รับเพื่อนใหม่ TU89</label>
+            <input type="checkbox" id="tu89" name="Activity" value="tu89" >
+            <label for="tu89"> รับเพื่อนใหม่ TU89</label>
           </div>
           <div class="Activity">
-            <input type="checkbox" id="ac3" name="ac3" value="cstu38" >
-            <label for="ac3"> CSTU38 Firstmeet</label>
+            <input type="checkbox" id="ac3" name="cstu38" value="cstu38" >
+            <label for="cstu38"> CSTU38 Firstmeet</label>
           </div>  
             <div class="Activity">
-            <input type="checkbox" id="ac4" name="ac4" value="halloween" >
-            <label for="ac4"> Halloween Nightmare 2023</label>
+            <input type="checkbox" id="halloween" name="Activity" value="halloween" >
+            <label for="halloween"> Halloween Nightmare 2023</label>
           </div>
           <div class="Activity">
-            <input type="checkbox" id="ac5" name="ac5" value="loykrathong" >
-            <label for="ac5"> Loykrathong Festival 2023</label>
+            <input type="checkbox" id="loykrathong" name="Activity" value="loykrathong" >
+            <label for="loykrathong"> Loykrathong Festival 2023</label>
           </div>
           <div class="Activity">
-            <input type="checkbox" id="ac6" name="ac6" value="etc" >
-            <label for="ac6">อื่นๆ </label>
+            <input type="checkbox" id="etc" name="Activity" value="etc">
+            <label for="etc">อื่นๆ </label>
           </div>
-        </div>
 
-          <div class="content">
-              <label for="comments">ข้อเสนอแนะ:</label>
-              <input type="text" placeholder="ข้อเสนอแนะ (ถ้ามี)" id="comments" name="comments">
-          </div>
-          
           <div class="submit">
-            <input type="submit" value="Submit">
-          </form>
-          <p id="demo"></p>
+            <input type="button" value="Submit" onclick="showFormData()">
           </div>
-    </section> 
+          </form>
+  </section> 
+  <div class="submitted-data">
+    <h2>ข้อมูลที่รับมาจากแบบฟอร์ม</h2>
 
-    <script>
-      function validateStudentID() {
-    const studentIDInput = document.getElementById("studentID");
-    const studentIDPattern = /^\d{10}$/;
-    const errorElement = document.getElementById("studentIDError");
-  
-    if (!studentIDPattern.test(studentIDInput.value)) {
-      errorElement.textContent = "Please enter a 10-digit Student ID.";
-      return false;
-    } else {
-      errorElement.textContent = ""; 
-    }
-    return true;
-  }
-  
-  function validateEmail() {
-    const emailInput = document.getElementById("email");
-    const emailPattern = /^.+@dome\.tu\.ac\.th$/;
-    const errorElement = document.getElementById("emailError");
-  
-    if (!emailPattern.test(emailInput.value)) {
-      errorElement.textContent =
-        "Please provide a valid university email in the format 'xxx.yyy@dome.tu.ac.th'.";
-      return false;
-    } else {
-      errorElement.textContent = ""; 
-    }
-    return true;
-  }
-    </script>
+    <p id="submitted-info"></p>
+  </div>
+    <script src="../script.js"> </script>
     </body>
 
 </html>
