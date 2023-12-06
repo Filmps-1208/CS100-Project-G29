@@ -17,11 +17,13 @@
             <div class="content">
               <label for="fullname1">ชื่อ - นามสกุล (ภาษาไทย) *</label>
               <input type="text" placeholder="กรุณาใส่ชื่อ - นามสกุล (ไทย)" id="fullname1" name="fullname1" required pattern="[\u0E01-\u0E4F\s]+">
+              <span id="fullname1Error" class="error"></span>
           </div>
           
           <div class="content">
             <label for="fullname2">Firstname - Lastname (EN) *</label>
             <input type="text" placeholder="Please enter your Firstname - Lastname (EN)" id="fullname2" name="fullname2" required pattern="[A-Za-z\s]+">
+            <span id="fullname2Error" class="error"></span>
         </div>   
 
         <div class="gender-1">
@@ -41,8 +43,25 @@
             </div>
       
             <div class="content">
+              <label for="Year">ปีการศึกษา:</label>
+              <select id="Year" name="Year">
+                <option value="" disabled selected>กรุณาเลือกปีการศึกษา</option>
+                <option value="2561">2561</option>
+                <option value="2562">2562</option>
+                <option value="2563">2563</option>
+                <option value="2564">2564</option>
+                <option value="2565">2565</option>
+                <option value="2566">2566</option>
+                <option value="2567">2567</option>
+                <option value="2568">2568</option>
+                <option value="2569">2569</option>
+              </select>
+            </div>
+            
+            <div class="content">
               <label for="num">รหัสนักศึกษา:</label>
               <input type="text" placeholder="กรุณาใส่รหัสนักศึกษา 10 ตัว" id="num" name="num" maxlength="10" required>
+              <span id="studentIDError" class="error"></span>
           </div>  
           
           <div class="content">
@@ -74,6 +93,7 @@
         <div class="content">
             <label for="email">ที่อยู่อีเมล (Email address):</label>
             <input type="email" placeholder="อีเมล" id="email" name="email" required>
+            <span id="emailError" class="error"></span>
         </div>    
     
           <div class="content">
