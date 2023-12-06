@@ -13,19 +13,13 @@
         <h1>Our Activities</h1>
         <p><u>**กรุณากรอกข้อมูลดังต่อไปนี้**</u></p>
         </div>
-        <form class="myform" action="#" method="post">
+        <form class="myform" action="" method="post">
             <div class="content">
-              <label for="fullname1">ชื่อ - นามสกุล (ภาษาไทย) *</label>
-              <input type="text" placeholder="กรุณาใส่ชื่อ - นามสกุล (ไทย)" id="fullname1" name="fullname1" required pattern="[\u0E01-\u0E4F\s]+">
-              <span id="fullname1Error" class="error"></span>
+              <label for="fullname">ชื่อ - นามสกุล (ภาษาไทย) *</label>
+              <input type="text" placeholder="กรุณาใส่ชื่อ - นามสกุล (ไทย)" id="fullname" name="fullname" required pattern="[\u0E01-\u0E4F\s]+">
+              <span id="fullnameError" class="error"></span>
           </div>
           
-          <div class="content">
-            <label for="fullname2">Firstname - Lastname (EN) *</label>
-            <input type="text" placeholder="Please enter your Firstname - Lastname (EN)" id="fullname2" name="fullname2" required pattern="[A-Za-z\s]+">
-            <span id="fullname2Error" class="error"></span>
-        </div>   
-
         <div class="gender-1">
             <h2>ระบุเพศ:</h2>
             <div class="gender">
@@ -57,10 +51,10 @@
                 <option value="2569">2569</option>
               </select>
             </div>
-            
+
             <div class="content">
-              <label for="num">รหัสนักศึกษา:</label>
-              <input type="text" placeholder="กรุณาใส่รหัสนักศึกษา 10 ตัว" id="num" name="num" maxlength="10" required>
+              <label for="studentID">รหัสนักศึกษา:</label>
+              <input type="text" placeholder="กรุณาใส่รหัสนักศึกษา 10 ตัว" id="studentID" name="studentID" maxlength="10" required>
               <span id="studentIDError" class="error"></span>
           </div>  
           
@@ -104,27 +98,27 @@
           <div class="Activity-1">
             <h2>กิจกรรมที่เคยเข้าร่วม: </h2>
           <div class="Activity">
-            <input type="checkbox" id="ac1" name="ac1" value="game" required>
+            <input type="checkbox" id="ac1" name="ac1" value="game" >
             <label for="ac1"> TU Freshy Games</label>
           </div>
           <div class="Activity">
-            <input type="checkbox" id="ac2" name="ac2" value="tu89" required>
+            <input type="checkbox" id="ac2" name="ac2" value="tu89" >
             <label for="ac2"> รับเพื่อนใหม่ TU89</label>
           </div>
           <div class="Activity">
-            <input type="checkbox" id="ac3" name="ac3" value="cstu38" required>
+            <input type="checkbox" id="ac3" name="ac3" value="cstu38" >
             <label for="ac3"> CSTU38 Firstmeet</label>
           </div>  
             <div class="Activity">
-            <input type="checkbox" id="ac4" name="ac4" value="halloween" required>
+            <input type="checkbox" id="ac4" name="ac4" value="halloween" >
             <label for="ac4"> Halloween Nightmare 2023</label>
           </div>
           <div class="Activity">
-            <input type="checkbox" id="ac5" name="ac5" value="loykrathong" required>
+            <input type="checkbox" id="ac5" name="ac5" value="loykrathong" >
             <label for="ac5"> Loykrathong Festival 2023</label>
           </div>
           <div class="Activity">
-            <input type="checkbox" id="ac6" name="ac6" value="etc" required>
+            <input type="checkbox" id="ac6" name="ac6" value="etc" >
             <label for="ac6">อื่นๆ </label>
           </div>
         </div>
@@ -137,8 +131,40 @@
           <div class="submit">
             <input type="submit" value="Submit">
           </form>
+          <p id="demo"></p>
           </div>
     </section> 
+
+    <script>
+      function validateStudentID() {
+    const studentIDInput = document.getElementById("studentID");
+    const studentIDPattern = /^\d{10}$/;
+    const errorElement = document.getElementById("studentIDError");
+  
+    if (!studentIDPattern.test(studentIDInput.value)) {
+      errorElement.textContent = "Please enter a 10-digit Student ID.";
+      return false;
+    } else {
+      errorElement.textContent = ""; 
+    }
+    return true;
+  }
+  
+  function validateEmail() {
+    const emailInput = document.getElementById("email");
+    const emailPattern = /^.+@dome\.tu\.ac\.th$/;
+    const errorElement = document.getElementById("emailError");
+  
+    if (!emailPattern.test(emailInput.value)) {
+      errorElement.textContent =
+        "Please provide a valid university email in the format 'xxx.yyy@dome.tu.ac.th'.";
+      return false;
+    } else {
+      errorElement.textContent = ""; 
+    }
+    return true;
+  }
+    </script>
     </body>
 
 </html>
