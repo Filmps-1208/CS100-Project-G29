@@ -13,13 +13,12 @@
         <h1>Our Activities</h1>
         <p><u>**กรุณากรอกข้อมูลดังต่อไปนี้**</u></p>
         </div>
-        <form class="myForm" action="#" method="post">
+        <form class="myForm" action="#" method="post" >
             <div class="content">
               <label for="fullname">ชื่อ - นามสกุล (ภาษาไทย) *</label>
-              <input type="text" placeholder="กรุณาใส่ชื่อ - นามสกุล (ไทย)" id="fullname" name="fullname" required pattern="[\u0E01-\u0E4F\s]+">
+              <input type="text" placeholder="กรุณาใส่ชื่อ - นามสกุล (ไทย)" id="fullname" name="fullname" >
               <span id="fullnameError" class="error"></span>
           </div>
-          
         <div class="gender-1">
             <h2>ระบุเพศ:</h2>
             <div class="gender">
@@ -107,7 +106,7 @@
           </div>
 
           <div class="submit">
-            <input type="button" value="Submit" onclick="showFormData()">
+           <input type="button" value="submit" onclick="showFormData()">
           </div>
 
           <div class="reset">
@@ -115,7 +114,7 @@
           </div>
 
           </form>
-          <div class="submitted-data">
+          <div class="submitted-data" >
             <p id="submitted-info"></p>
           </div>
   </section> 
