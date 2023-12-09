@@ -1,3 +1,4 @@
+// 1 js ชื่อ-นามสกุลเป็นภาษาไทย ถ้ากรอกเป็นภาษาอังกฤษหรือตัวเลขจะมีการเตือน
 const fullnameInput = document.getElementById("fullname");
 const errorElementFullName = document.getElementById("fullnameError");
 
@@ -11,7 +12,7 @@ fullnameInput.addEventListener('input', function() {
     errorElementFullName.textContent = ""; 
   }
 });
-
+// 2 js กรอกอีเมลของมหาวิทยาลัย ที่มี@dome
 const emailInput = document.getElementById("email");
 const emailPattern = /^.+@dome\.tu\.ac\.th$/;
 const errorElementEmail = document.getElementById("emailError");
@@ -19,7 +20,7 @@ const errorElementEmail = document.getElementById("emailError");
 emailInput.addEventListener("input", function() {
     if (!emailPattern.test(emailInput.value)) {
         errorElementEmail.textContent =
-            "กรุณากรอกอีเมลตามแบบฟอร์มของมหาลัยวิทยาลัย 'xxx.yyy@dome.tu.ac.th'.";
+            "กรุณากรอกอีเมลตามแบบฟอร์มของมหาวิทยาลัย 'xxx.yyy@dome.tu.ac.th'.";
         errorElementEmail.style.color = "red";
     } else {
         errorElementEmail.textContent = "";
@@ -27,7 +28,8 @@ emailInput.addEventListener("input", function() {
 });
 
 /////////////////////////////////////////////
-//1 js ตรวจสอบของรหัสนักศึกษาช่วงปี พ.ศ.59-66
+//3 js ตรวจสอบของรหัสนักศึกษาอยู่ในช่วงปี พ.ศ.59-66
+//กรอกรหัสนศ. แค่10ตัวเท่านั้น ถ้าไม่ตรงตามเงื่อนไขจะมีการเตือน
 
   const studentIDInput = document.getElementById("studentID");
   const errorElementStudentID = document.getElementById("studentIDError");
@@ -45,7 +47,7 @@ emailInput.addEventListener("input", function() {
 });
 
 ////////////////////////////////////////////
-// 2 js
+// 4 js รับข้อมูลมาแสดงผลด้านล่างของแบบฟอร์ม
 
 function showFormData() {
   // เข้าถึงข้อมูลที่ผู้ใช้กรอก
